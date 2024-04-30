@@ -122,6 +122,7 @@ section.about {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 900px;
 }
 
 .about__title {
@@ -350,42 +351,36 @@ footer {
 Utiliza las referencias de los breakpoints @media abajo */
 
 
-/*Tablet*/
+
+/*tablet*/
 @media (min-width: 768px) {
 
-    /* Menú */
-    .menu__list__item:nth-child(1),
-    .menu__list__item:nth-child(5),
-    .menu__list__item:nth-child(4),
-    .menu__list__item:nth-child(3),
-    .menu__list__item:nth-child(2) {
-        display: flex;
+    /*Menu*/
+    section.menu {
+        justify-content: space-between;
     }
 
-    /*title*/
+    /* section title */
+    .title__div {
+        flex-direction: row-reverse;
+        gap: 32px;
+    }
 
-    /*Skills*/
-
-    /*Hobbies*/
-
-    /*Formación Académica*/
-
-    /*Experiencia Profesional*/
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-    /*Menu*/
-
-
+    .title__network {
+        gap: 32px;
+    }
 
     /*Sección sobre mi*/
 
 
     /*Skills*/
-
+    .skills__line,
+    .hobbies__line {
+        /* display: grid; */
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 32px 16px;
+        align-items: flex-end; */
+    }
 
     /* practica */
 
@@ -397,6 +392,16 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     /*Formación Académica*/
 
+    .academic__courses {
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .academic__courses__item__img {
+        width: 224px;
+
+    }
+
     /*Experiencia Profesional*/
 
     /*Contacto*/
@@ -404,3 +409,152 @@ Utiliza las referencias de los breakpoints @media abajo */
     /*Footer*/
 
 }
+
+
+
+
+
+
+/*pc*/
+@media (min-width: 1440px) {
+
+    /* Menú */
+    .menu__list__item:nth-child(1),
+    .menu__list__item:nth-child(5),
+    .menu__list__item:nth-child(4),
+    .menu__list__item:nth-child(3),
+    .menu__list__item:nth-child(2) {
+        display: flex;
+    }
+
+    section.menu {
+        justify-content: space-around;
+        padding: 32px 0px;
+        margin-bottom: 32PX;
+    }
+
+    /*title*/
+
+    section.title {
+        padding: 0;
+    }
+
+    .title__div {
+        justify-content: center;
+        gap: 15%;
+        align-items: center;
+        margin-bottom: 32px;
+        padding: 0px 115px;
+    }
+
+    .title__profile {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* sobri mi */
+    section.about {
+        padding: 64px 115px;
+
+    }
+
+    .about__container{
+
+    }
+
+    /*Skills*/
+
+    section.skills,
+    section.hobbies {
+        padding: 0px 115px 0px 115px;
+        margin-bottom: 88px;
+    }
+
+    .skills__line,
+    .hobbies__line {
+        /* display: grid; */
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    /*Hobbies*/
+
+    /*Formación Académica*/
+    section.academic {
+        padding: 82px;
+
+    }
+
+    .academic__courses__item__img img {
+        width: 150px;
+        height: 120px;
+    }
+
+    .academic__courses__item__img {
+        width: 348px;
+        height: 286px;
+    }
+
+    /*Experiencia Profesional*/
+    /* .experiencie__box {        
+        flex-direction: row;
+        align-items: center;
+    } */
+    /* .experiencie__box:nth-child(odd) {
+        display: flex;
+        flex-direction: row;
+      } .experiencie__box:nth-child(even) {
+        display: flex;
+        flex-direction: row-reverse;
+      } */
+    .experiencie__box:nth-child(1) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Aplicar estilos al segundo elemento */
+    .experiencie__box:nth-child(2) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    /* Aplicar estilos al tercer elemento */
+    .experiencie__box:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Aplicar estilos al cuarto elemento */
+    .experiencie__box:nth-child(4) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    /* contacto */
+    .formcontato--esquerda {
+        display: flex;
+    }
+    .formcontato__contacto{
+        
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    }
+    .formcontato__text {
+        justify-content: space-between;
+    }
+
+}
+
+/* @media (min-width: 1260px){
+
+    .title__div {
+       
+    }
+
+
+} */
